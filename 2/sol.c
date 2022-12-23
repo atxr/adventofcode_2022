@@ -6,7 +6,7 @@
 unsigned int get_score1(char* line) {
   char opponent = line[0] - 'A';
   char you = line[2] - 'X';
-  return you + 1 + 3 * (you - opponent) % 3;
+  return you + 1 + 3 * ((you - opponent + 4) % 3);
 }
 
 unsigned int get_score2(char* line) {
